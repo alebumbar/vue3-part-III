@@ -22,7 +22,8 @@
           <div
             v-for="item in items"
             class="single-todo"
-            :class="{done: item.done}"
+            :class="{done : item.done}"
+            @click="item.done =!item.done "
           >
             <p>{{ item.text }}</p>
           </div>

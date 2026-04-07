@@ -1,21 +1,8 @@
-//testing
-var items = [
-  {
-    text: "Learn Vuejs",
-    done: true,
-  },
-
-  {
-    text: "Learn Vuejs",
-    done: false,
-  },
-];
 
 const todosApp = {
   data() {
     return {
-      items: window.items,
-      //items: [],
+      items: [],
       newToDo: {
         done: false,
       },
