@@ -24,14 +24,10 @@ const todosApp = {
       this.items = [];
     },
   },
-  beforeCreate() {
-    console.log("Before create");
-  },
   created() {
-    console.log("Created");
-  },
-  beforeUpdate() {
-    console.log("Before update");
+    this.items = localStorage.getItem("items")
+      ? JSON.parse(localStorage.getItem("items"))
+      : this.items;
   },
 };
 
