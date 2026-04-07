@@ -7,13 +7,15 @@ const todosApp = {
       },
     };
   },
+
   methods: {
-    addItem: function () {
+    addItem() {
       if (this.newToDo.text) {
         this.items.push(this.newToDo);
         this.newToDo = {
           done: false,
         };
+        localStorage.setItem("items", JSON.stringify(this.items));
       } else {
         alert("To do item is required");
       }
