@@ -16,10 +16,17 @@
   <body>
     <main id="app">
       <section class="todo-list">
+        
         <h3>To-do List</h3>
-        <div class="all-todos" v-for="item in items">
-          <div class="single-todo done"></div>
-          <p>{{ newToDo.item }}</p>
+
+        <div class="all-todos">
+          <div
+            v-for="todo in todos"
+            class="single-todo"
+            :class="todo: todo.done"
+          >
+            <p>{{ todo.text }}</p>
+          </div>
         </div>
         <button class="clear" @click="clearAll()">Clear All</button>
 

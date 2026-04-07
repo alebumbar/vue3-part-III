@@ -1,6 +1,19 @@
+//testing
+var todos = [
+{
+  text: 'Learn Vuejs',
+  done: true
+}
+{
+  text: 'Learn Vuejs',
+  done: false
+}
+];
+
 const todosApp= {
   data() {
     return {
+      todos: window.todos,
       items: [],
       newToDo: { item: '' },
     };
