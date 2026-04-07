@@ -20,9 +20,20 @@ const todosApp = {
         alert("To do item is required");
       }
     },
+    // storeItems() {
+    //   localStorage.setItem("items", JSON.stringify(this.items));
+    // },
     clearAll() {
       this.items = [];
     },
+  },
+  created() {
+    this.items = localStorage.getItem("items")
+      ? JSON.parse(localStorage.getItem("items"))
+      : this.items;
+  },
+  updated() {
+    localStorage.setItem("items", JSON.stringify(this.items));
   },
 };
 
