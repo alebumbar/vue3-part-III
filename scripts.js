@@ -29,6 +29,9 @@ const todosApp = {
       ? JSON.parse(localStorage.getItem("items"))
       : this.items;
   },
+  updated() {
+    localStorage.setItem("items", JSON.stringify(this.items));
+  },
 };
 
 Vue.createApp(todosApp).mount("#app");
