@@ -1,4 +1,3 @@
-
 const todosApp = {
   data() {
     return {
@@ -19,7 +18,7 @@ const todosApp = {
         alert("To do item is required");
       }
     },
-    clearAll: function () {
+    clearAll() {
       this.items = [];
     },
   },
