@@ -16,21 +16,20 @@
   <body>
     <main id="app">
       <section class="todo-list">
-        
         <h3>To-do List</h3>
 
         <div class="all-todos">
           <div
-            v-for="todo in todos"
+            v-for="item in items"
             class="single-todo"
-            :class="todo: todo.done"
+            :class="{done: item.done}"
           >
-            <p>{{ todo.text }}</p>
+            <p>{{ item.text }}</p>
           </div>
         </div>
         <button class="clear" @click="clearAll()">Clear All</button>
 
-        <input type="text" placeholder="Add new to-do" v-model="newToDo.item" />
+        <input type="text" placeholder="Add new to-do" v-model="newToDo.text" />
         <button class="add" @click="addItem()">Add</button>
 
         <div class="instructions">
