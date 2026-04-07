@@ -20,9 +20,9 @@ const todosApp = {
         alert("To do item is required");
       }
     },
-    storeItems() {
-      localStorage.setItem("items", JSON.stringify(this.items));
-    },
+    // storeItems() {
+    //   localStorage.setItem("items", JSON.stringify(this.items));
+    // },
     clearAll() {
       this.items = [];
     },
@@ -31,6 +31,9 @@ const todosApp = {
     this.items = localStorage.getItem("items")
       ? JSON.parse(localStorage.getItem("items"))
       : this.items;
+  },
+  updated() {
+    localStorage.setItem("items", JSON.stringify(this.items));
   },
 };
 
